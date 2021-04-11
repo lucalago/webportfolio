@@ -29,16 +29,38 @@ span6.addEventListener('mouseout', function(){
 window.onscroll = function() {scrollFunctionDesktop()};
 
 function scrollFunctionDesktop() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("navbar").style.top = "0";
   } else {
     document.getElementById("navbar").style.top = "-110px";
   }
 } 
-function scrollFunctionMobile() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("navbar").style.top = "0";
-    } else {
-      document.getElementById("navbar").style.top = "-60px";
-    }
-  } 
+
+let openContactButton = document.getElementById("contact-btn");
+let closeContactButton = document.getElementById("contact-close-btn");
+let contactSection = document.getElementById("contact-section");
+let contactDiv = document.getElementById("contact-div"); 
+
+openContactButton.addEventListener("click", showContactSection);
+closeContactButton.addEventListener("click", hideContactSection);
+
+
+function hideContactSection() {
+  contactSection.classList.remove("visibility-section");
+  contactDiv.classList.remove("visibility-div");
+  // contactSection.style.opacity = 0;
+  // contactSection.setAttribute( 'style', 'z-index: -9999 !important');
+  // contactDiv.style.opacity = 0;
+  // contactDiv.setAttribute( 'style', 'z-index: -9999 !important');
+}
+function showContactSection() {
+  contactSection.classList.add("visibility-section");
+  contactDiv.classList.add("visibility-div");
+  // contactSection.style.opacity = 1;
+  // contactSection.setAttribute( 'style', 'z-index: 197 !important');
+  // contactDiv.style.opacity = 1;
+  // contactDiv.setAttribute( 'style', 'z-index: 200 !important');
+}
+
+
+

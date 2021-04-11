@@ -1,3 +1,11 @@
+/* Welcome to my web portfolio*/
+/* Seems like you are interested in understanding how I built portfolio ^^ */
+
+/* Default State size: min-width: 1201px */
+/* Small Desktop size: max-width: 1200px */
+/* Tablet size: max-width: 1024px */
+/* Mobile phone size: max-width: 768px */
+
 :root {
     --main-bg-color: white;
     --main-bg-color-reverse: rgb(31, 31, 31);
@@ -5,7 +13,6 @@
     --main-font-color-reverse: white;
     --main-neon-color: rgb(208, 255, 0);
 }
-
 @font-face {
     font-family: neueMetana;
     src: url(fonts/NeueMetana-Regular.otf);
@@ -14,7 +21,6 @@
     font-family: codecPro;
     src: url(fonts/codecproregular.woff);
 }
-
 html, body {
     background-color: var(--main-bg-color);
     width: 100vw;
@@ -26,7 +32,6 @@ html, body {
 ::selection {
   background: rgb(208, 255, 0);
 }
-
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -44,7 +49,7 @@ h3, h4, h5, h6, p {
 h1, h2, h3, h4, h5, h6, p {
     cursor: default;
 }
-#gradient-canvas {
+canvas.gradient-header {
     height: 50%;
     width: 100vw !important;
     --gradient-color-1: #c8ff00; 
@@ -52,9 +57,10 @@ h1, h2, h3, h4, h5, h6, p {
     --gradient-color-3: #648000;  
     --gradient-color-4: #2c2c2c;
     overflow: hidden;
+    z-index: 40;
 }
 @media screen and (max-width: 767px) {
-    #gradient-canvas {
+    canvas.gradient-header {
         height: 33vh;
     }
 }
@@ -62,13 +68,13 @@ nav#navbar {
     display: flex;
     flex-direction: row;
     position: fixed;
-    top: 0px;
+    top: -110px;
     left: 0;
     background-color: white;
     transition: all 500ms ease-out;
     width: 100vw;
     height: 110px;
-    z-index: 9999;
+    z-index: 50;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 div#logo-container {
@@ -108,20 +114,22 @@ div#logo-container div#name-upper {
 div#logo-container div#name-lower {
     margin-top: -8px;
 }
-button#contact-btn {
+.standard-btn {
     font-size: 1.2rem;
-    position: absolute;
-    top: 30%;
-    right: 2%;
-    justify-content: flex-end;
     border: none;
-    border-radius: 50px;
+    border-radius: 25px;
     padding: 10px 20px;
     background-size: 100% 200%; 
     background-image: linear-gradient(to bottom, #fff 50%, var(--main-neon-color) 50%);
     transition: all 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-button#contact-btn:hover {
+button#contact-btn {
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    justify-content: flex-end;
+}
+.standard-btn:hover {
     background-position: 0 100%;
     color: var(--main-bg-color-reverse);
 }
@@ -142,9 +150,13 @@ div#intro-section {
         text-justify: inter-character;
     }
 }
-h1.intro-title {
+h1.intro-title, .h1-style {
     display: block;
     font-size: 2.5rem;
+}
+.h2-style {
+    display: block;
+    font-size: 1.8rem;
 }
 @media screen and (max-width: 1399px) {
     h1.intro-title {
@@ -154,7 +166,7 @@ h1.intro-title {
         max-width: 100%;
     }
 }
-h1.intro-title span {
+h1.intro-title span, .span-highlight {
     display: inline-block;
     position: relative;
     border-bottom: 3px solid black;  
@@ -163,12 +175,15 @@ h1.intro-title span {
     margin-top: 5px;
     height: 45px;
 }
+#h2-span-highlight {
+    height: 35px;
+}
 @media screen and (max-width: 400px) {
     h1.intro-title span, h1.intro-title {
         font-size: 2.1rem;
     }
 }
-h1.intro-title span:hover, h1.intro-title span#span-1:hover ~span#span-2, h1.intro-title span#span-3:hover ~span#span-4, h1.intro-title span#span-5:hover ~span#span-6, .active-span {
+h1.intro-title span:hover, h1.intro-title span#span-1:hover ~span#span-2, h1.intro-title span#span-3:hover ~span#span-4, h1.intro-title span#span-5:hover ~span#span-6, .active-span, .span-highlight:hover {
     border-bottom: 3px solid rgb(208, 255, 0) !important;
 }
 div#left-work-div, div#right-work-div {
@@ -196,6 +211,9 @@ div#gallery > div > img, #gallerywrapper, #gallerywrapper #gallery, #gallerywrap
         margin-right: 20vw !important;
     }
 }
+div#work-categories {
+    margin-bottom: 20px;
+}
 h3.work-category {
     font-size: 0.8rem;
 }
@@ -217,6 +235,8 @@ h2.work-title {
 }
 h2.work-title:hover {
     color: var(--main-neon-color);
+}
+h2.cursor-readmore:hover {
     cursor: url('assets/cursor-read-more.png') 35 35, url('assets/cursor-read-more.png') 35 35, auto !important;
 }
 div a.client-link {
@@ -225,13 +245,23 @@ div a.client-link {
 div a.client-link:hover {
     text-decoration: none;
 }
-h4.work-client {
+h4.work-client, h4.work-category {
     font-size: 1.3rem;
     font-weight: 200;
     text-transform: uppercase;
 }
 h4.work-client:hover, div a.client-link:hover {
     cursor: url('assets/cursor-client-website.png')  10 10, url('assets/cursor-client-website.png') 10 10, auto !important;
+}
+div.external-link {
+    margin-top: 10px !important;
+}
+div.external-link h4 {
+    margin: 0;
+    padding: 0;
+}
+div.external-link h4:hover {
+    cursor: url('assets/cursor-external-link.png')  0 0, url('assets/cursor-external-link.png') 0 0, auto !important;
 }
 div#portfolio-work-01, div#portfolio-work-02, div#portfolio-work-03, div#portfolio-work-04, div#portfolio-work-05 {
     display: flex;
@@ -314,3 +344,55 @@ div#right-work-div div#portfolio-img-01 {
 #gallerywrapper #gallery div {
     position: relative;
 } 
+section#contact-section {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0vw;
+    height: 0vh;
+    transition: visibility 1s, opacity 1s, background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: var(--main-bg-color-reverse);
+}
+div#contact-div {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -999;
+    padding: 5% 5%;
+    margin: 15% 10%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    transition: visibility 1s, opacity 1s, background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.visibility-div {
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 200 !important;
+}
+.visibility-section {
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 200 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+}
+div#contact-div #contact-close-btn {
+    align-self: flex-end;
+    z-index: 9999;
+}
+div#contact-details {
+    margin: 80px 0;
+}
+div#contact-div h1#contact-title {
+    margin-top: -40px;
+}
+a#email-contact {
+    text-decoration: none;
+    color: var(--main-bg-color-reverse);
+}
