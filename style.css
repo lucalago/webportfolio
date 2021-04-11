@@ -1,0 +1,316 @@
+:root {
+    --main-bg-color: white;
+    --main-bg-color-reverse: rgb(31, 31, 31);
+    --main-font-color: rgb(31, 31, 31);
+    --main-font-color-reverse: white;
+    --main-neon-color: rgb(208, 255, 0);
+}
+
+@font-face {
+    font-family: neueMetana;
+    src: url(/fonts/NeueMetana-Regular.otf);
+  }
+@font-face {
+    font-family: codecPro;
+    src: url(/fonts/codecproregular.woff);
+}
+
+html, body {
+    background-color: var(--main-bg-color);
+    width: 100vw;
+    height: 100vh;
+}
+::-moz-selection {
+    background: rgb(208, 255, 0);
+}
+::selection {
+  background: rgb(208, 255, 0);
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+  }
+h1, p.name-logo, h2, button {
+    font-family: neueMetana, sans-serif;
+}
+h3, h4, h5, h6, p {
+    font-family: codecPro, sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p {
+    cursor: default;
+}
+#gradient-canvas {
+    height: 50%;
+    width: 100vw !important;
+    --gradient-color-1: #c8ff00; 
+    --gradient-color-2: #919b6d; 
+    --gradient-color-3: #648000;  
+    --gradient-color-4: #2c2c2c;
+    overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+    #gradient-canvas {
+        height: 33vh;
+    }
+}
+nav#navbar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    background-color: white;
+    transition: all 500ms ease-out;
+    width: 100vw;
+    height: 110px;
+    z-index: 9999;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+div#logo-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 30px 30px !important;
+    font-weight: bold;
+}
+div#name-upper span, div#name-lower span {
+    margin-top: -2px;
+    font-size: 2.4rem;
+}
+div#black-box {
+    width: 3.1rem;
+    height: 3.1rem;
+    background-color: var(--main-bg-color-reverse);
+    border-radius: 0px;
+}
+div#neon-box-left {
+    background-color: var(--main-neon-color);
+    width: 0.5rem;
+    height: 0.5rem;
+    position: relative;
+    top: 75%;
+    left: 10%;
+}
+div#logo-container p.name-logo {
+    display: inline-flex;
+    font-size: 2rem;
+    line-height: 100%;
+    margin: 0;
+}
+div#logo-container div#name-upper {
+    margin: 0px 0 0 0;
+}
+div#logo-container div#name-lower {
+    margin-top: -8px;
+}
+button#contact-btn {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 30%;
+    right: 2%;
+    justify-content: flex-end;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    background-size: 100% 200%; 
+    background-image: linear-gradient(to bottom, #fff 50%, var(--main-neon-color) 50%);
+    transition: all 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+button#contact-btn:hover {
+    background-position: 0 100%;
+    color: var(--main-bg-color-reverse);
+}
+button span {
+    font-size: 1.4rem;
+}
+div.boxed-content {
+    padding: 70px 5%;
+}
+div#intro-section {
+    height: 25vh;
+    max-width: 100%;
+    margin: 12.5vh 10vw;
+}
+@media screen and (min-width: 800px) {
+    div#intro-section {
+        text-align: justify;
+        text-justify: inter-character;
+    }
+}
+h1.intro-title {
+    display: block;
+    font-size: 2.5rem;
+}
+@media screen and (max-width: 1399px) {
+    h1.intro-title {
+        font-size: 2.2rem;
+    }
+    div#intro-section {
+        max-width: 100%;
+    }
+}
+h1.intro-title span {
+    display: inline-block;
+    position: relative;
+    border-bottom: 3px solid black;  
+    transition: all 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 3px;
+    margin-top: 5px;
+    height: 45px;
+}
+@media screen and (max-width: 400px) {
+    h1.intro-title span, h1.intro-title {
+        font-size: 2.1rem;
+    }
+}
+h1.intro-title span:hover, h1.intro-title span#span-1:hover ~span#span-2, h1.intro-title span#span-3:hover ~span#span-4, h1.intro-title span#span-5:hover ~span#span-6, .active-span {
+    border-bottom: 3px solid rgb(208, 255, 0) !important;
+}
+div#left-work-div, div#right-work-div {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    padding: 0;
+}
+div#left-work-div {
+    margin-top: 50px;
+}
+div#right-work-div {
+    display: flex;
+    flex-direction: row;
+}
+div#gallery > div > img, #gallerywrapper, #gallerywrapper #gallery, #gallerywrapper #gallery div {
+    height: 30vw !important;
+    width: 45vw !important;
+}
+@media screen and (min-width: 1200px) {
+    div#left-work-div {
+        margin-left: 5vw !important;
+    }
+    div#right-work-div {
+        margin-right: 20vw !important;
+    }
+}
+h3.work-category {
+    font-size: 0.8rem;
+}
+div.category-tag {
+    padding: 5px 10px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+div.category-tag h3 {
+    margin: 0;
+}
+div.category-tag {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+h2.work-title {
+    margin: 0;
+    transition: all 500ms ease-out;
+}
+h2.work-title:hover {
+    color: var(--main-neon-color);
+    cursor: url('assets/cursor-read-more.png') 35 35, url('assets/cursor-read-more.png') 35 35, auto !important;
+}
+div a.client-link {
+    color: var(--main-bg-color-reverse);
+}
+div a.client-link:hover {
+    text-decoration: none;
+}
+h4.work-client {
+    font-size: 1.3rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+h4.work-client:hover, div a.client-link:hover {
+    cursor: url('assets/cursor-client-website.png')  10 10, url('assets/cursor-client-website.png') 10 10, auto !important;
+}
+div#portfolio-work-01, div#portfolio-work-02, div#portfolio-work-03, div#portfolio-work-04, div#portfolio-work-05 {
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 1040px) {
+    div#portfolio-work-01, div#portfolio-work-02, div#portfolio-work-03, div#portfolio-work-04, div#portfolio-work-05 {
+        flex-direction: row;
+    }
+}
+@media screen and (max-width: 1039px) {
+    div#gallerywrapper {
+        margin-top: 80px;
+    }
+    div#gallery > div > img, #gallerywrapper, #gallerywrapper #gallery, #gallerywrapper #gallery div {
+        height: 45vw !important;
+        width: 70vw !important;
+    }
+}
+div.gallery-content {
+    filter: grayscale(1);
+    display: flex;
+    flex-direction: row;
+    background-size: cover;
+    background-position: center center;
+    box-shadow:
+      2em 4em 6em -2em rgba(0,0,0,.5),
+      1em 2em 3.5em -2.5em rgba(0,0,0,.5);
+    transition: 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+div.gallery-content:hover {
+    filter: grayscale(0);
+}
+div.img-hover {
+    position: relative;
+    min-width: 50%;
+    min-height: 100%;
+    z-index: 9999;
+}
+a.previous, a.next {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+a.previous {
+    left: 0;
+}
+a.next {
+    right: 0;
+}
+a.previous:hover {
+    cursor: url('assets/cursor-previous.png') 35 35, url('assets/cursor-previous.png') 35 35, auto !important;
+}
+a.next:hover {
+    cursor: url('assets/cursor-next.png') 35 35, url('assets/cursor-next.png') 35 35, auto !important;
+}
+div#right-work-div div#portfolio-img-01 {
+    background-image: url(/assets/BG-Site-1.png);
+}
+@media screen and (max-width: 767px) {
+    div.gallery-content {
+        margin-top: 50px;
+    }
+}
+#gallerywrapper, #gallerywrapper #gallery div {
+    position: relative;
+} 
+#gallerywrapper {
+    margin: 0 auto;
+} 
+#gallerywrapper #gallery {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 3px;
+} 
+#gallerywrapper #gallery div {
+    position: relative;
+} 
