@@ -8,11 +8,11 @@
 
 @font-face {
     font-family: neueMetana;
-    src: url(/fonts/NeueMetana-Regular.otf);
+    src: url(https://github.com/lucalago/webportfolio/tree/main/fonts/NeueMetana-Regular.otf);
   }
 @font-face {
     font-family: codecPro;
-    src: url(/fonts/codecproregular.woff);
+    src: url(https://github.com/lucalago/webportfolio/tree/main/fonts/codecproregular.woff);
 }
 
 html, body {
