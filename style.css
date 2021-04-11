@@ -284,13 +284,13 @@ a.next {
     right: 0;
 }
 a.previous:hover {
-    cursor: url('/assets/cursor-previous.png') 35 35, url('h/main/assets/cursor-previous.png') 35 35, auto !important;
+    cursor: url('/assets/cursor-previous.png') 35 35, url('/assets/cursor-previous.png') 35 35, auto !important;
 }
 a.next:hover {
-    cursor: url('/main/assets/cursor-next.png') 35 35, url('/assets/cursor-next.png') 35 35, auto !important;
+    cursor: url('/assets/cursor-next.png') 35 35, url('/assets/cursor-next.png') 35 35, auto !important;
 }
 div#right-work-div div#portfolio-img-01 {
-    background-image: url(/main/assets/BG-Site-1.png);
+    background-image: url(/assets/BG-Site-1.png);
 }
 @media screen and (max-width: 767px) {
     div.gallery-content {
