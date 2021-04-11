@@ -8,11 +8,11 @@
 
 @font-face {
     font-family: neueMetana;
-    src: url(/fonts/NeueMetana-Regular.otf);
+    src: url(fonts/NeueMetana-Regular.otf);
   }
 @font-face {
     font-family: codecPro;
-    src: url(/fonts/codecproregular.woff);
+    src: url(fonts/codecproregular.woff);
 }
 
 html, body {
@@ -217,7 +217,7 @@ h2.work-title {
 }
 h2.work-title:hover {
     color: var(--main-neon-color);
-    cursor: url('/assets/cursor-read-more.png') 35 35, url('/assets/cursor-read-more.png') 35 35, auto !important;
+    cursor: url('assets/cursor-read-more.png') 35 35, url('assets/cursor-read-more.png') 35 35, auto !important;
 }
 div a.client-link {
     color: var(--main-bg-color-reverse);
@@ -231,7 +231,7 @@ h4.work-client {
     text-transform: uppercase;
 }
 h4.work-client:hover, div a.client-link:hover {
-    cursor: url('/assets/cursor-client-website.png')  10 10, url('/assets/cursor-client-website.png') 10 10, auto !important;
+    cursor: url('assets/cursor-client-website.png')  10 10, url('assets/cursor-client-website.png') 10 10, auto !important;
 }
 div#portfolio-work-01, div#portfolio-work-02, div#portfolio-work-03, div#portfolio-work-04, div#portfolio-work-05 {
     display: flex;
@@ -284,13 +284,13 @@ a.next {
     right: 0;
 }
 a.previous:hover {
-    cursor: url('/assets/cursor-previous.png') 35 35, url('/assets/cursor-previous.png') 35 35, auto !important;
+    cursor: url('assets/cursor-previous.png') 35 35, url('assets/cursor-previous.png') 35 35, auto !important;
 }
 a.next:hover {
-    cursor: url('/assets/cursor-next.png') 35 35, url('/assets/cursor-next.png') 35 35, auto !important;
+    cursor: url('assets/cursor-next.png') 35 35, url('assets/cursor-next.png') 35 35, auto !important;
 }
 div#right-work-div div#portfolio-img-01 {
-    background-image: url(/assets/BG-Site-1.png);
+    background-image: url(assets/BG-Site-1.png);
 }
 @media screen and (max-width: 767px) {
     div.gallery-content {
