@@ -26,7 +26,10 @@ span6.addEventListener('mouseout', function(){
     span5.classList.remove("active-span");
 });
 
-window.onscroll = function() {scrollFunctionDesktop()};
+window.onscroll = function() {
+  scrollFunctionDesktop();
+  scrollBarFunctionDesktop();
+};
 
 function scrollFunctionDesktop() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
@@ -34,6 +37,13 @@ function scrollFunctionDesktop() {
   } else {
     document.getElementById("navbar").style.top = "-110px";
   }
+} 
+
+function scrollBarFunctionDesktop() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("headerProgressBar").style.width = scrolled + "%";
 } 
 
 let openContactButton = document.getElementById("contact-btn");
