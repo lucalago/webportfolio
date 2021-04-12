@@ -89,6 +89,7 @@ nav#navbar {
     height: 8px;
     background: var(--main-neon-color);
     width: 0%;
+    transition: all 0s ease-in !important;
 }
 div#logo-container {
     position: fixed;
