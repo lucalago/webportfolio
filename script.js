@@ -64,8 +64,49 @@ let openWork4 = document.getElementById("work4-open")
 let work5Div = document.getElementById("work5-readmore-div");
 let openWork5 = document.getElementById("work5-open") 
 
+openWork1.addEventListener("click", showWork1Section);
+closeWork1.addEventListener("click", hideWork1Section);
+openWork2.addEventListener("click", showWork2Section);
+closeWork2.addEventListener("click", hideWork2Section);
+openWork3.addEventListener("click", showWork3Section);
+closeWork3.addEventListener("click", hideWork3Section);
+openWork4.addEventListener("click", showWork4Section);
+closeWork4.addEventListener("click", hideWork4Section);
 openWork5.addEventListener("click", showWork5Section);
 closeWork5.addEventListener("click", hideWork5Section);
+
+function showWork1Section() {
+  work1Div.classList.add("visibility-div");
+  popUpSection.classList.add("visibility-section");
+}
+function hideWork1Section() {
+  work1Div.classList.remove("visibility-div");
+  popUpSection.classList.remove("visibility-section");
+}
+function showWork2Section() {
+  work2Div.classList.add("visibility-div");
+  popUpSection.classList.add("visibility-section");
+}
+function hideWork2Section() {
+  work2Div.classList.remove("visibility-div");
+  popUpSection.classList.remove("visibility-section");
+}
+function showWork3Section() {
+  work3Div.classList.add("visibility-div");
+  popUpSection.classList.add("visibility-section");
+}
+function hideWork3Section() {
+  work3Div.classList.remove("visibility-div");
+  popUpSection.classList.remove("visibility-section");
+}
+function showWork4Section() {
+  work4Div.classList.add("visibility-div");
+  popUpSection.classList.add("visibility-section");
+}
+function hideWork4Section() {
+  work4Div.classList.remove("visibility-div");
+  popUpSection.classList.remove("visibility-section");
+}
 
 function showWork5Section() {
   work5Div.classList.add("visibility-div");

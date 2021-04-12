@@ -355,19 +355,17 @@ section#pop-up-section {
     opacity: 0;
     background-color: var(--main-bg-color-reverse);
 }
-div#work1-readmore-div, div#work2-readmore-div, div#work3-readmore-div, div#work4-readmore-div, div#work5-readmore-div, div#contact-div, section#pop-up-section {
+div.pop-up-div, section#pop-up-section {
     position: fixed;
     top: 0;
     left: 0;
     transition: visibility 1s, opacity 1s, background-color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-div#work1-readmore-div, div#work2-readmore-div, div#work3-readmore-div, div#work4-readmore-div, div#work5-readmore-div, div#contact-div {
+div.pop-up-div {
     z-index: -999;
     visibility: hidden;
     opacity: 0;
     background-color: white;
-}
-div#work1-readmore-div, div#work2-readmore-div, div#work3-readmore-div, div#work4-readmore-div, div#work5-readmore-div, div#contact-div {
     display: flex;
     flex-direction: column;
     padding: 5% 5%;
