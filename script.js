@@ -73,6 +73,11 @@ let work4Div = document.getElementById("work4-readmore-div");
 let openWork4 = document.getElementById("work4-open") 
 let work5Div = document.getElementById("work5-readmore-div");
 let openWork5 = document.getElementById("work5-open") 
+let closeWork1 = document.getElementById("contact-close-btn"); 
+let closeWork2 = document.getElementById("contact-close-btn"); 
+let closeWork3 = document.getElementById("contact-close-btn"); 
+let closeWork4 = document.getElementById("contact-close-btn"); 
+let closeWork5 = document.getElementById("contact-close-btn"); 
 
 openWork1.addEventListener("click", showWork1Section);
 closeWork1.addEventListener("click", hideWork1Section);
