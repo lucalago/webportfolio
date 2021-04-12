@@ -38,29 +38,42 @@ function scrollFunctionDesktop() {
 
 let openContactButton = document.getElementById("contact-btn");
 let closeContactButton = document.getElementById("contact-close-btn");
-let contactSection = document.getElementById("contact-section");
+let popUpSection = document.getElementById("pop-up-section");
 let contactDiv = document.getElementById("contact-div"); 
 
 openContactButton.addEventListener("click", showContactSection);
 closeContactButton.addEventListener("click", hideContactSection);
 
-
-function hideContactSection() {
-  contactSection.classList.remove("visibility-section");
-  contactDiv.classList.remove("visibility-div");
-  // contactSection.style.opacity = 0;
-  // contactSection.setAttribute( 'style', 'z-index: -9999 !important');
-  // contactDiv.style.opacity = 0;
-  // contactDiv.setAttribute( 'style', 'z-index: -9999 !important');
-}
 function showContactSection() {
-  contactSection.classList.add("visibility-section");
+  popUpSection.classList.add("visibility-section");
   contactDiv.classList.add("visibility-div");
-  // contactSection.style.opacity = 1;
-  // contactSection.setAttribute( 'style', 'z-index: 197 !important');
-  // contactDiv.style.opacity = 1;
-  // contactDiv.setAttribute( 'style', 'z-index: 200 !important');
+}
+function hideContactSection() {
+  popUpSection.classList.remove("visibility-section");
+  contactDiv.classList.remove("visibility-div");
 }
 
+let work1Div = document.getElementById("work1-readmore-div");
+let openWork1 = document.getElementById("work1-open") 
+let work2Div = document.getElementById("work2-readmore-div");
+let openWork2 = document.getElementById("work2-open") 
+let work3Div = document.getElementById("work3-readmore-div");
+let openWork3 = document.getElementById("work3-open") 
+let work4Div = document.getElementById("work4-readmore-div");
+let openWork4 = document.getElementById("work4-open") 
+let work5Div = document.getElementById("work5-readmore-div");
+let openWork5 = document.getElementById("work5-open") 
+
+openWork5.addEventListener("click", showWork5Section);
+closeWork5.addEventListener("click", hideWork5Section);
+
+function showWork5Section() {
+  work5Div.classList.add("visibility-div");
+  popUpSection.classList.add("visibility-section");
+}
+function hideWork5Section() {
+  work5Div.classList.remove("visibility-div");
+  popUpSection.classList.remove("visibility-section");
+}
 
 
